@@ -40,5 +40,8 @@ public class ServicesImpl implements UserDetailsService {
 	public Employee add(Employee employee) {
 		return dao.save(employee);
 	}
+	public Employee edit(Employee employee) {
+		return dao.save(employee);
+	}
 
 }

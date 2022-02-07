@@ -38,5 +38,9 @@ public class Controller {
 	public ResponseEntity<Employee> add(@RequestBody Employee employee) {
 		return new ResponseEntity<Employee>(service.add(employee),HttpStatus.OK);
 	}
+	@PostMapping("/edit")
+	public ResponseEntity<Employee> edit(@RequestBody Employee employee) {
+		return new ResponseEntity<>(service.edit(employee), HttpStatus.OK);
+	}
 
 }

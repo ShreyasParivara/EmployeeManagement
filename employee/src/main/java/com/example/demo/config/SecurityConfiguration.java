@@ -20,24 +20,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	       .antMatchers("/register" , "/register/**","/login", "/login/**","/delete","/delete/**","/add","/add/**")
 	       .permitAll().anyRequest().authenticated()
 	       .and().csrf().disable();
-//		 http.httpBasic().and()
-//	       .authorizeRequests()
-//	       .antMatchers("/login" , "/login/**")
-//	       .permitAll().anyRequest().authenticated()
-//	       .and().csrf().disable();
-//		 http.httpBasic().and()
-//	       .authorizeRequests()
-//	       .antMatchers("/delete" , "/delete/**")
-//	       .permitAll().anyRequest().authenticated()
-//	       .and().csrf().disable();
-//		 http.httpBasic().and()
-//	       .authorizeRequests()
-//	       .antMatchers("/add" , "/add/**")
-//	       .permitAll().anyRequest().authenticated()
-//	       .and().csrf().disable();
-		
-    
-	
+
 	}
 	
 	@Override
