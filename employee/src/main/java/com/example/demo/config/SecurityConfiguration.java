@@ -17,7 +17,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		 http.httpBasic().and()
 	       .authorizeRequests()
-	       .antMatchers("/register" , "/register/**","/login", "/login/**","/delete","/delete/**","/add","/add/**")
+	       .antMatchers("/register" , "/register/**","/login", "/login/**","/delete","/delete/**","/add","/add/**","/edit","/edit/**")
 	       .permitAll().anyRequest().authenticated()
 	       .and().csrf().disable();
 

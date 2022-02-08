@@ -30,8 +30,8 @@ public class Controller {
 	}
 
 	@GetMapping("/delete")
-	public void delete(@RequestParam Integer id) {
-		service.delete(id);
+	public String delete(@RequestParam Integer id) {
+		return service.delete(id);
 	}
 
 	@PostMapping("/add")
@@ -40,7 +40,7 @@ public class Controller {
 	}
 	@PostMapping("/edit")
 	public ResponseEntity<Employee> edit(@RequestBody Employee employee) {
-		return new ResponseEntity<>(service.edit(employee), HttpStatus.OK);
+		return new ResponseEntity<Employee>(service.edit(employee), HttpStatus.OK);
 	}
 
 }

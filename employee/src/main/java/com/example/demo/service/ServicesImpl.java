@@ -33,8 +33,14 @@ public class ServicesImpl implements UserDetailsService {
 		return dao.findAll();
 	}
 	
-	public void delete(Integer id) {
+	public String delete(Integer id) {
+		try {
 		dao.deleteById(id);
+		return "Employee data deleted";
+		}catch(Exception e){
+			e.printStackTrace();
+			return "Employeee data not deleted";
+		}
 	}
 	
 	public Employee add(Employee employee) {
